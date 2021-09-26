@@ -65,7 +65,9 @@ python manage.py runserver
 
 ### Test
 
-TODO
+```
+python manage.py test
+```
 
 ### Docker
 
