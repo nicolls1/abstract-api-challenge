@@ -22,11 +22,11 @@ Signup can be done at: `/users/signup/`
 
 ### Add a new subscription and plans (admin only)
 
-If it is a brand new API (`/api/`) you will need to first add the Api but if the API already exists you can go straight to adding the subscription (``). You will probably want to hold off on having the new subscription being available to new users until after you have added the plans. With the SubscriptionPlan model you can add the new plans and their details.
+If it is a brand new API (`/api/`) you will need to first add the Api but if the API already exists you can go straight to adding the subscription (`/subscriptions/`). You will probably want to hold off on having the new subscription being available to new users until after you have added the plans. With the SubscriptionPlan (`/subscription_plans/`) model you can add the new plans and their details to the subscription you just created.
 
 ### Setting a users subscription or plan (admin only)
 
-You can do this by updating the UserSubscription object for your user.
+You can do this by updating the UserSubscription (`/user_subscriptions/`) object for your user.
 
 ## Local Setup
 
@@ -105,4 +105,4 @@ Users will be left hanging without a subscription to an API when the API is crea
 
 ## TODOs before production ready
 
-Since this is just a coding challenge, obviously this project is lacking some key things to be production ready. I tried to focus my time on the things explicitly asked for so some things that were not explicit didn't make the cut. More tests and a production ready docker setup with gunicorn are the first two things that come to mind. It would probably also make sense to have a single endpoint where you can create a new subscription with plans in one step.
+Since this is just a coding challenge, obviously this project is lacking some key things to be production ready. I tried to focus my time on the things explicitly asked for and add as much as I could to get it as close as I could. More tests and a production ready docker setup with gunicorn are the first two things that come to mind. It would probably also make sense to have a single endpoint where you can create a new subscription with plans in one step.
