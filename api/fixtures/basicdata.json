@@ -1,0 +1,291 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$eDAIE3XqLq8OzA6dUMd8gE$AvgqTnd830spyUoBz9KH7rRMmYYdXRicEGYqgWzYneI=",
+      "last_login": "2021-09-26T20:46:22.288Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-09-26T12:55:28.829Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$1unTY77HupbQNxhPGgSyzd$C8K0HxUxDA4K7tdgaTgzDyTleySVjp8KSMhs2onqYI0=",
+      "last_login": "2021-09-26T20:48:03.018Z",
+      "is_superuser": false,
+      "username": "user",
+      "first_name": "",
+      "last_name": "",
+      "email": "user@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-26T20:48:02.858Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "api.api",
+    "pk": 1,
+    "fields": {
+      "create_time": "2021-09-26T12:56:07.342Z",
+      "name": "Gender"
+    }
+  },
+  {
+    "model": "api.api",
+    "pk": 2,
+    "fields": {
+      "create_time": "2021-09-26T12:56:11.816Z",
+      "name": "Weather"
+    }
+  },
+  {
+    "model": "api.subscription",
+    "pk": 1,
+    "fields": {
+      "api": 1,
+      "create_time": "2021-09-26T12:56:24.830Z",
+      "is_new_user_default": false
+    }
+  },
+  {
+    "model": "api.subscription",
+    "pk": 2,
+    "fields": {
+      "api": 1,
+      "create_time": "2021-09-26T12:57:47.619Z",
+      "is_new_user_default": false
+    }
+  },
+  {
+    "model": "api.subscription",
+    "pk": 3,
+    "fields": {
+      "api": 1,
+      "create_time": "2021-09-26T12:58:37.298Z",
+      "is_new_user_default": true
+    }
+  },
+  {
+    "model": "api.subscription",
+    "pk": 4,
+    "fields": {
+      "api": 2,
+      "create_time": "2021-09-26T12:59:33.169Z",
+      "is_new_user_default": false
+    }
+  },
+  {
+    "model": "api.subscription",
+    "pk": 5,
+    "fields": {
+      "api": 2,
+      "create_time": "2021-09-26T13:01:47.766Z",
+      "is_new_user_default": false
+    }
+  },
+  {
+    "model": "api.subscription",
+    "pk": 6,
+    "fields": {
+      "api": 2,
+      "create_time": "2021-09-26T13:02:45.269Z",
+      "is_new_user_default": true
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 1,
+    "fields": {
+      "subscription": 1,
+      "name": "Free",
+      "calls_allowed": 100,
+      "unlimited_calls": false,
+      "price": 0.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 2,
+    "fields": {
+      "subscription": 1,
+      "name": "Basic",
+      "calls_allowed": 1000,
+      "unlimited_calls": false,
+      "price": 10.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 3,
+    "fields": {
+      "subscription": 1,
+      "name": "Premium",
+      "calls_allowed": 10000,
+      "unlimited_calls": false,
+      "price": 20.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 4,
+    "fields": {
+      "subscription": 2,
+      "name": "Root",
+      "calls_allowed": 1000,
+      "unlimited_calls": false,
+      "price": 10.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 5,
+    "fields": {
+      "subscription": 2,
+      "name": "Growth",
+      "calls_allowed": 10000,
+      "unlimited_calls": false,
+      "price": 30.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 6,
+    "fields": {
+      "subscription": 3,
+      "name": "Basic",
+      "calls_allowed": 1000,
+      "unlimited_calls": false,
+      "price": 10.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 7,
+    "fields": {
+      "subscription": 3,
+      "name": "Premium",
+      "calls_allowed": 10000,
+      "unlimited_calls": false,
+      "price": 30.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 8,
+    "fields": {
+      "subscription": 3,
+      "name": "Scale",
+      "calls_allowed": 100000,
+      "unlimited_calls": false,
+      "price": 100.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 9,
+    "fields": {
+      "subscription": 4,
+      "name": "Free",
+      "calls_allowed": 100,
+      "unlimited_calls": false,
+      "price": 0.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 10,
+    "fields": {
+      "subscription": 4,
+      "name": "Pro",
+      "calls_allowed": 1000,
+      "unlimited_calls": false,
+      "price": 50.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 11,
+    "fields": {
+      "subscription": 4,
+      "name": "Enterprise",
+      "calls_allowed": 0,
+      "unlimited_calls": true,
+      "price": 500.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 12,
+    "fields": {
+      "subscription": 5,
+      "name": "Free",
+      "calls_allowed": 10,
+      "unlimited_calls": false,
+      "price": 0.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 13,
+    "fields": {
+      "subscription": 5,
+      "name": "Pro",
+      "calls_allowed": 1500,
+      "unlimited_calls": false,
+      "price": 50.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 14,
+    "fields": {
+      "subscription": 6,
+      "name": "Seed",
+      "calls_allowed": 1000,
+      "unlimited_calls": false,
+      "price": 50.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 15,
+    "fields": {
+      "subscription": 6,
+      "name": "Scale",
+      "calls_allowed": 0,
+      "unlimited_calls": true,
+      "price": 1000.0
+    }
+  },
+  {
+    "model": "api.usersubscription",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "subscription": 3,
+      "active_plan": null
+    }
+  },
+  {
+    "model": "api.usersubscription",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "subscription": 6,
+      "active_plan": null
+    }
+  }
+]
