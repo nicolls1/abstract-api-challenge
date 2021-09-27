@@ -106,6 +106,15 @@
     }
   },
   {
+    "model": "api.subscription",
+    "pk": 7,
+    "fields": {
+      "api": 2,
+      "create_time": "2021-09-26T13:05:45.269Z",
+      "is_new_user_default": false
+    }
+  },
+  {
     "model": "api.subscriptionplan",
     "pk": 1,
     "fields": {
@@ -268,6 +277,17 @@
       "calls_allowed": 0,
       "unlimited_calls": true,
       "price": 1000.0
+    }
+  },
+  {
+    "model": "api.subscriptionplan",
+    "pk": 16,
+    "fields": {
+      "subscription": 7,
+      "name": "Custom",
+      "calls_allowed": 0,
+      "unlimited_calls": true,
+      "price": 2000.0
     }
   },
   {
