@@ -21,7 +21,7 @@ class PublicSubscriptionPlanSerializer(SubscriptionPlanSerializer):
 
     class Meta:
         model = SubscriptionPlan
-        fields = ['url', 'id', 'name', 'calls_allowed', 'unlimited_calls', 'price', 'active']
+        fields = ['id', 'name', 'calls_allowed', 'unlimited_calls', 'price', 'active']
 
     def __init__(self, *args, active_plan_id=None, **kwargs):
         super().__init__(*args, **kwargs)
