@@ -20,8 +20,6 @@ from rest_framework import routers
 from user import views as user_views
 from api import views as api_views
 
-from rest_framework import urls
-
 router = routers.DefaultRouter()
 router.register(r'users', user_views.UserViewSet, basename='user')
 router.register(r'apis', api_views.ApiViewSet, basename='api')

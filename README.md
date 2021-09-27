@@ -1,14 +1,14 @@
 # Abstract User Subscriptions
 
-An API for tracking use's billing subscriptions that they see and their current active plans.
+An API for tracking user's Api subscriptions and allows for different users to be on different subscriptions and plans.
 
 ## Overview
 
 A user's billing subscriptions are tracked through 4 models which are Api, Subscription, SubscriptionPlan, and UserSubscription.
 - **Api**: The Api model tracks the different Apis available on the platform. All users can read the different Apis but only admins can create. Users see their subscription plans on the detailed route `/apis/{id}/subscription_plans/`.
 - **Subscription**: A Subscription belongs to an Api and consists of many plans. Users get assigned to a Subscription when they signup. This is only available to admins and users do not know that different subscriptions with different plans exist.
-- **SubscriptionPlan**: A SubscriptionPlan is the different plans that belong to a subscription. It tracks the calls allowed and pricing for each plan.
-- **UserSubscription**: A UserSubscription tracks the current Subscription and the active SubscriptionPlan for a user. If a free tier exists in their Subscription, a user is automatically signed up to it.
+- **SubscriptionPlan**: A SubscriptionPlan is one of many plans that belong to a subscription. It tracks the calls allowed and pricing for each plan. It is only available to admins.
+- **UserSubscription**: A UserSubscription tracks the current Subscription and the active SubscriptionPlan for a user. If a free tier exists in their Subscription, a user is automatically signed up to it. It is only available to admins.
 
 ## Common tasks
 
@@ -93,7 +93,7 @@ I chose to use django rest framework as it is built for data only APIs such as t
 
 ## Explicit Subscription model
 
-I first tinkered with not having an explicit subscription model, but ended up coming back to add it. It very error prone and not as extendable to not have it. I like that the Subscription model can explicitly say if it is the default model for new users as it could allow you to easily switch or A/B test different subscriptions without being locked in to only taking the highest version. It also means that specific enterprise subscriptions can be easily handled as they will never be the default for all users.
+I first tinkered with not having an explicit subscription model, but ended up coming back to add it. It felt very error prone and not as extendable to not have it. I like that the Subscription model can explicitly say if it is the default model for new users as it could allow you to easily switch or A/B test different subscriptions without being locked in to only taking the highest version. It also means that specific enterprise subscriptions can be easily handled as they will never be the default for all users.
 
 ## Could users not be assigned to a Subscription until they view or use it?
 
